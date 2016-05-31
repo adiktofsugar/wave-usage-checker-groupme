@@ -4,6 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "./index.js",
+    "pcp": "cp local.wave-usage.plist ~/Library/LaunchAgents",
+    "prm": "rm ~/Library/LaunchAgents",
+    "pload": "launchctl load ~/Library/LaunchAgents/local.wave-usage.plist",
+    "punload": "launchctl unload ~/Library/LaunchAgents/local.wave-usage.plist",
+    "pstart": "launchctl start local.wave-usage",
+    "pinfo": "launchctl list | grep local.wave-usage",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -11,8 +18,12 @@
   "license": "ISC",
   "dependencies": {
     "async": "^1.5.2",
+    "aws-sdk": "^2.3.16",
+    "cli": "^0.11.2",
+    "groupme": "^0.5.7",
     "jsdom": "^9.0.0",
     "request": "^2.72.0",
+    "rimraf": "^2.5.2",
     "to-markdown": "^3.0.0"
   }
 }
