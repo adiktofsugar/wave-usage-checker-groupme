@@ -8,12 +8,6 @@
         <key>WorkingDirectory</key>
         <string>/Users/smccollum/dev/wave-usage</string>
 
-        <key>EnvironmentVariables</key>
-        <dict>
-          <key>PATH</key>
-          <string>/Users/smccollum/.nvm/versions/node/v5.0.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
-        </dict>
-
         <key>ProgramArguments</key>
         <array>
             <string>/bin/bash</string>

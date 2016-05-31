@@ -10,7 +10,7 @@
     "pload": "launchctl load ~/Library/LaunchAgents/local.wave-usage.plist",
     "punload": "launchctl unload ~/Library/LaunchAgents/local.wave-usage.plist",
     "pstart": "launchctl start local.wave-usage",
-    "pinfo": "launchctl list | grep local.wave-usage",
+    "pinfo": "launchctl list | grep local.wave-usage || true",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

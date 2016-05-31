@@ -19,9 +19,6 @@ The index.js script
 plist
 ---
 Designed as an User Agent, which means it should be installed to `~/Library/LaunchAgents`
-`cp local.wave-usage.plist ~/Library/LaunchAgents/`
-`launchctl load ~/Library/LaunchAgents/local.wave-usage.plist`
+First you've gotta copy it over, then load it, which can be done with:
+- `npm run pcp; npm run pload`
 Should run every day at noon.
-To run immediately, do `launchctl start local.wave-usage`
-To get info, do `launchctl info local.wave-usage`
-To unload it, `launchctl unload ~/Library/LaunchAgents/local.wave-usage.plist`
