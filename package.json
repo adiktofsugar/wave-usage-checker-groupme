@@ -11,7 +11,8 @@
     "punload": "launchctl unload ~/Library/LaunchAgents/local.wave-usage.plist",
     "pstart": "launchctl start local.wave-usage",
     "pinfo": "launchctl list | head -n 1; launchctl list | grep local.wave-usage || echo '(nothing)'",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "downloadS3": "mkdir -p ./s3-images; aws s3 cp --recursive s3://wave-groupme-707 ./s3-images"
   },
   "keywords": [],
   "author": "Sean McCollum <anincrediblyshortname@gmail.com>",
