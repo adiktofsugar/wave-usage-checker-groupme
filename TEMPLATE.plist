@@ -6,7 +6,7 @@
         <string>local.wave-usage</string>
         
         <key>WorkingDirectory</key>
-        <string>/Users/smccollum/dev/wave-usage</string>
+        <string>current directory will go here</string>
 
         <key>ProgramArguments</key>
         <array>
@@ -14,6 +14,12 @@
             <string>-c</string>
             <string>npm start -- -c creds.json</string>
         </array>
+
+        <key>EnvironmentVariables</key>
+        <dict>
+            <key>PATH</key>
+            <string>path goes here</string>
+        </dict>
 
         <key>StartCalendarInterval</key>
         <dict>

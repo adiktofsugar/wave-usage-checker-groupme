@@ -17,6 +17,9 @@ var async = require('async');
 var downloadAndSaveImages = require('./lib/download');
 var groupMePost = require('./lib/groupme-post');
 
+
+var shouldMockGroupMe = false;
+
 var cli = require('cli');
 cli.parse({
     debug:      ['d', 'Enable debug output', 'on'],
@@ -44,6 +47,7 @@ cli.main(function (args, options) {
             log:cli.ok
         }),
         async.apply(groupMePost, {
+            shouldMock: shouldMockGroupMe,
             imageDir: imageDir,
             awsRegionName: creds['aws-region-name'],
             awsBucketName: creds['aws-bucket-name'],

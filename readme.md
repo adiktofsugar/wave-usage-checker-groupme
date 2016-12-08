@@ -16,9 +16,27 @@ The groupme-post script
 The index.js script
 - defines the cli, gets the information from the creds json file, and feeds it into the other scripts in that order
 
-plist
+Installation
 ---
-Designed as an User Agent, which means it should be installed to `~/Library/LaunchAgents`
-First you've gotta copy it over, then load it, which can be done with:
-- `npm run pcp; npm run pload`
+
+TL;DR: `npm run pcp; npm run pload`
 Should run every day at noon.
+
+Designed as an Apple plist User Agent (http://launchd.info/), which means it should be installed and loaded.
+
+- Install `npm run pcp`
+    Generates a file based on TEMPLATE.plist and copies it to the ~/Library/LaunchAgents directory
+- Load    `npm run pload`
+    Links it up with launchd, so that it'll run on schedule
+- Unload  `npm run punload`
+    Removes from launchd. Will no longer automatically run
+
+More obscure commands:
+
+- Run     `npm run pstart`
+    Immediately runs from launchd. useful for testing
+- Info    `npm run pinfo`
+    Status within launchd
+- Delete  `npm run prm`
+    Deletes the plist file
+
